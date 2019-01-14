@@ -7,6 +7,9 @@ footer p{
 footer a{
     margin:0 1%;
 }
-main{
-    margin-top: 2%;
+
+.highlight{
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: capitalize;
 }
