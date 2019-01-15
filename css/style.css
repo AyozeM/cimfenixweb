@@ -13,3 +13,17 @@ footer a{
     font-weight: bold;
     text-transform: capitalize;
 }
+.card{
+    width:15%;
+}
+
+#services{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+
+#mapa{
+    height: 50vh;
+    width: 70vw;
+}
