@@ -16,6 +16,10 @@ footer a{
 .card{
     width:15%;
 }
+.card img{
+    height: 25vh;
+    margin-top: 1px;
+}
 
 #services{
     display: flex;
@@ -26,4 +30,9 @@ footer a{
 #mapa{
     height: 50vh;
     width: 70vw;
+}
+.btn-floating{
+    position:fixed;
+    right:5%;
+    bottom: 7%;
 }
