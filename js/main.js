@@ -32,7 +32,11 @@ new Vue({
       },
       {
         title: 'radiodiagnóstico',
+<<<<<<< HEAD
         img: 'img/mamografia.jpg'
+=======
+        img: 'img/radiodiagnostico.jpg'
+>>>>>>> 5755c849011c7616b5b2dacf1b5dadad795ac97b
       },
     ]
   }
