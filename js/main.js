@@ -15,19 +15,24 @@ new Vue({
   data: {
     services: [
       {
-        title: 'tatuajes'
+        title: 'tatuajes',
+        img: 'img/tatuando.jpg'
       },
       {
-        title: 'estilistas'
+        title: 'estilistas',
+        img: 'img/maquillando.jpg'
       },
       {
-        title: 'psicología'
+        title: 'apoyo',
+        img: 'img/apoyo.jpg'
       },
       {
-        title: 'apoyo'
+        title: 'psicología',
+        img: 'img/hablando.jpg'
       },
       {
-        title: 'radiodiagnóstico'
+        title: 'radiodiagnóstico',
+        img: 'img/radiodiagnostico.jpg'
       },
     ]
   }
