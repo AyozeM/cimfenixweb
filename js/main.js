@@ -54,7 +54,7 @@ const slowLinks = () =>{
 }
 
 const drawMap = () => {
-  let mapOptions = {
+  const mapOptions = {
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     disableDefaultUI: true,
     zoomControl: true,
