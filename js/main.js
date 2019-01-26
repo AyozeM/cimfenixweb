@@ -16,11 +16,11 @@ new Vue({
     services: [
       {
         title: 'tatuajes',
-        img: 'img/tatuando.jpg'
+        img: 'img/tatuando.png'
       },
       {
         title: 'estilistas',
-        img: 'img/maquillando.jpg'
+        img: 'img/estilismo.jpg'
       },
       {
         title: 'apoyo',
@@ -28,11 +28,11 @@ new Vue({
       },
       {
         title: 'psicología',
-        img: 'img/hablando.jpg'
+        img: 'img/psicologia.jpg'
       },
       {
         title: 'radiodiagnóstico',
-        img: 'img/mamografia.jpg'
+        img: 'img/radiodiagnostico.jpg'
       },
     ]
   }
