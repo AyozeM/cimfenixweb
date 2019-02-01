@@ -11,18 +11,20 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
     <header>
         <nav id="navbar">
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">CIM Fénix</a>
+                <img src="img/logo.png" alt="logo" id="logo">
+                <a href="#!" class="brand-logo"> CIM Fénix</a>
                 <ul class="right">
-                    <li><a href="#vision">vision</a></li>
-                    <li><a href="#servicios">servicios</a></li>
-                    <li><a href="#ubicacion">ubicacion</a></li>
-                    <li><a href="#contacto">contacto</a></li>
+                    <li><a href="#vision">Visión</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#ubicacion">Ubicación</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
         </nav>
@@ -31,7 +33,7 @@
 
         <!-- mision -->
         <div class="parallax-container">
-            <div class="parallax"><img src="img/imagenPrincipal1.jpg"></div>
+            <div class="parallax"><img src="img/imagenPrincipal1.png"></div>
         </div>
         <div class="section white">
             <div class="row container">
@@ -41,12 +43,15 @@
                     bienestar de nuestros clientes, poniendo a su dispocición todas nuestras instalaciones, servicios y
                     personal.
                 </p>
+                <p>
+                    Es un centro de atención integral para las pacientes con cáncer de mama, queremos mejorar su calidad de vida de forma integral, atendiendo al ámbito físico, psicológico y emocional, en cualquier momento de la enfermedad, desde el diagnóstico hasta la superación de la enfermedad. Para ello, le brindaremos los siguientes servicios:
+                </p>
             </div>
         </div>
 
         <!-- servicios -->
         <div class="parallax-container">
-            <div class="parallax"><img src="img/imagenPrincipal2.png"></div>
+            <div class="parallax"><img src="img/imagenPrincipal2.jpg"></div>
         </div>
         <div class="section white">
             <div class="row">
@@ -60,16 +65,12 @@
                             <img class="activator" :src="card.img">
                         </div>
                         <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">{{card.title}}<i class="material-icons right">more_vert</i></span>
-                            Lorem ipsum dolor
+                            <span class="card-title activator grey-text text-darken-4">{{card.title | capitalize }}<i class="material-icons right">more_vert</i></span>
+                            
                         </div>
                         <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Servicio de tatuajes<i class="material-icons right">close</i></span>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, accusamus ea nesciunt
-                                iste
-                                sint laudantium beatae neque, quaerat magnam ipsa deserunt voluptatibus cupiditate
-                                debitis
-                                eum ipsum odit inventore sapiente voluptates.</p>
+                            <span class="card-title grey-text text-darken-4">{{card.title | capitalize}}<i class="material-icons right">close</i></span>
+                            <p>{{card.text}}.</p>
                         </div>
                     </div>
                 </div>
@@ -79,7 +80,7 @@
 
         <!-- ubicacion -->
         <div class="parallax-container">
-            <div class="parallax"><img src="img/imagenPrincipal3.png" alt=""></div>
+            <div class="parallax"><img src="img/imagenPrincipal3.jpg" alt=""></div>
         </div>
         <div class="section white">
             <div class="row container">
@@ -91,60 +92,53 @@
 
         <!-- contacto -->
         <div class="parallax-container">
-            <div class="parallax"><img src="img/mujerPanuelo.jpg" alt=""></div>
+            <div class="parallax"><img src="img/imagenPrincipal4.jpg" alt=""></div>
         </div>
         <div class="section white">
             <div class="row container">
                 <h2 id="contacto">Contacta con nosotros</h2>
-                <form class="col s12">
+                <form class="col s12" id="formulario" @submit.prevent="sendForm">
                     <div class="row">
                         <div class="input-field col s4">
                             <i class="material-icons prefix">account_circle</i>
-                            <input type="text" name="name" id="name">
-                            <label for="name">nombre</label>
+                            <input type="text" name="name" id="name" v-model="formData.name">
+                            <label for="name">Nombre</label>
                         </div>
                         <div class="input-field col s4">
                             <i class="material-icons prefix">email</i>
-                            <input type="email" name="email" id="email">
-                            <label for="email">email</label>
+                            <input type="email" name="email" id="email" v-model="formData.email">
+                            <label for="email">Email</label>
                         </div>
                         <div class="input-field col s4">
                             <i class="material-icons prefix">phone</i>
-                            <input type="tel" name="phone" id="phone">
+                            <input type="tel" name="phone" id="phone" v-model="formData.phone">
                             <label for="phone">Teléfono</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">question_answer</i>
-                            <textarea name="comment" id="comment" class="materialize-textarea"></textarea>
+                            <textarea name="comment" id="comment" class="materialize-textarea" v-model="formData.question"></textarea>
                             <label for="comment">Consulta</label>
                         </div>
                     </div>
                     <div class="row">
                         <label>
-                            <input type="checkbox">
+                            <input type="checkbox" v-model="formData.terms">
                             <span>Acepto los <a href="#!" class="red-text">términos y condiciones</a></span>
                         </label>
                     </div>
                     <div class="row">
-                        <button type="submit" class="waves-effect waves-light btn red lighten-1">Enviar consulta <i class="material-icons right">send</i></button>
+                        <button type="submit" class="waves-effect waves-light btn red lighten-1">Enviar consulta 
+                            <i class="fas fa-spinner fa-pulse" v-if="loading"></i>
+                            <i class="material-icons right" v-else>send</i>
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
     </main>
     <footer class="page-footer">
-        <div class="container">
-            <h5>Links</h5>
-            <ul>
-                <li><a href="#!">Link</a></li>
-                <li><a href="#!">Link</a></li>
-                <li><a href="#!">Link</a></li>
-                <li><a href="#!">Link</a></li>
-                <li><a href="#!">Link</a></li>
-            </ul>
-        </div>
         <div class="footer-copyright">
             <div class="container row">
                 <div class="col s6">

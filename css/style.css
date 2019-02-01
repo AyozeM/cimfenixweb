@@ -36,3 +36,16 @@ footer a{
     right:5%;
     bottom: 7%;
 }
+
+*::-webkit-scrollbar{
+    width: 3px;
+}
+*::-webkit-scrollbar{
+    width: 5px;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: #EE6E73;
+}
+#logo{
+    margin:0 1%;
+}
