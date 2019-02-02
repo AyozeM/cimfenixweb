@@ -50,7 +50,31 @@ footer a{
 #logo{
     margin:0 1%;
 }
-@media screen and (max-width:414px){
+
+@media screen and (max-width:1200px){
+    .card{
+        width: 19%;
+    }
+    .card .card-title{
+        font-size: 22px;
+    }
+}
+
+@media screen  and (max-width:992px){
+    #mapa{
+        width: 100%;
+        height: 40vh;
+    }    
+    .card{
+        width: 40%;
+    }
+    #logo{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:600px){
     h2{
         font-size: 2.5rem;
         text-align: center;
@@ -66,21 +90,4 @@ footer a{
         height: 50vh;
     }
     
-}
-
-@media screen and (max-width:768px){
-    .card{
-        width: 40%;
-    }
-    #logo{
-        display: none;
-    }
-}
-@media screen and (max-width:1024px){
-    .card{
-        width: 19%;
-    }
-    .card .card-title{
-        font-size: 22px;
-    }
 }
