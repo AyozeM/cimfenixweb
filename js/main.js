@@ -1,11 +1,19 @@
 let map;
 const ubicacion = new google.maps.LatLng(28.471001,-16.250654);
+
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('#year').textContent = new Date().getFullYear();
   document.querySelector('#logo').style.height = `${document.querySelector('#navbar').offsetHeight}px`;
   var elems = document.querySelectorAll('.parallax');
   var instances = M.Parallax.init(elems);
   
+  var navElems = document.querySelectorAll('.sidenav');
+  const navInstances = M.Sidenav.init(navElems);
+  [].slice.call(document.querySelectorAll('#mobile-demo li')).map(e=>{
+    e.addEventListener('click', () =>{
+      const x = M.Sidenav.getInstance(document.querySelector('.sidenav')).close();
+    })
+  })
   slowLinks();
   drawMap();
 });
