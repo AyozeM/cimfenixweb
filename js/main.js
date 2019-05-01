@@ -1,5 +1,7 @@
 let map;
-const ubicacion = new google.maps.LatLng(28.471001,-16.250654);
+const latitud = 28.392096;
+const longitud = -16.5217706;
+const ubicacion = new google.maps.LatLng(latitud,longitud);
 
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('#year').textContent = new Date().getFullYear();
@@ -71,7 +73,7 @@ new Vue({
       {
         title: 'radiología',
         img: 'img/radiodiagnostico.jpg',
-        text:'El diagnóstico precoz del cáncer es la clave para que los tratamientos sean menos agresivos y tener mejor sobrevida. Por ello, contamos con un novedoso equipo de tomosíntesis de mama de General Electric (SenoClaire), es una tecnología que proporciona la visualización tridimensional del tejido mamario mediante bajas dosis de radiación ionizante alrededor de la mama comprimida.'
+        text:'El diagnóstico precoz del cáncer es la clave para que los tratamientos sean menos agresivos y tener mejor sobrevida. Por ello, contamos con un novedoso equipo de tomosíntesis de mama de General Electric (SenoClaire) y con un ecógrafo de última tecnología para ecografías mamarias, el Invenia ABUS.'
       },
     ]
   }
